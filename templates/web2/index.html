@@ -1,0 +1,124 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>何志成个人模板</title>
+<meta name="keywords" content="个人博客模板,博客模板,响应式" />
+<meta name="description" content="" />
+<link href="/static/web2/css/base.css" rel="stylesheet">
+<link href="/static/web2/css/index.css" rel="stylesheet">
+<link href="/static/web2/css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/static/web2/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody">
+  <header>
+    <h1>莎士比亚</h1>
+    <h2>爱的力量是和平，从不顾理性、成规和荣辱，它能使一切恐惧、震惊和痛苦在身受时化作甜蜜。</h2>
+    <div class="logo"><a href="/"></a></div>
+    <nav id="topnav"><a href="{{ url_for('web.index') }}">首页</a><a href="{{ url_for('web.about_me') }}">关于我</a><a href="{{url_for('web.home_page2')}}">后端平台</a><a href="{{url_for('web.notes')}}">我的笔记</a></nav>
+  </header>
+  <aside>
+    <div class="avatar"><a href="about.html"><span>关于何志成</span></a></div>
+    <div class="topspaceinfo">
+      <h1>执子之手，与子偕老</h1>
+      <p>于千万人之中，我遇见了我所遇见的人....</p>
+    </div>
+    <div class="about_c">
+      <p>网名：hancc | 憨猜猜</p>
+      <p>职业：python开发师 </p>
+      <p>籍贯：云南省―曲靖市</p>
+      <p>电话：15288446770</p>
+      <p>邮箱：2534965436@qq.com</p>
+    </div>
+    <div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+    <div class="tj_news">
+      <h2>
+        <p class="tj_t1">最新文章</p>
+      </h2>
+      <ul>
+        <li><a href="/">git指令</a></li>
+        <li><a href="/">vim编辑神器</a></li>
+      </ul>
+      <h2>
+        <p class="tj_t2">推荐文章</p>
+      </h2>
+      <ul>
+        <li><a href="/">python人工智能</a></li>
+        <li><a href="/">Linux系统</a></li>
+        <li><a href="/">数据库分析</a></li>
+        <li><a href="/">web前端</a></li>
+        <li><a href="/">flask</a></li>
+      </ul>
+    </div>
+
+  </aside>
+  <article>
+    <div class="banner">
+      <ul class="texts">
+        <p>The best life is use of willing attitude, a happy-go-lucky life. </p>
+        <p>最好的生活是用心甘情愿的态度，过随遇而安的生活。</p>
+      </ul>
+    </div>
+    <div class="bloglist">
+      <h2>
+        <p><span>推荐</span>文章</p>
+      </h2>
+      <div class="blogs">
+        <h3><a href="/">git指令</a></h3>
+        <figure><img src="/static/web2/images/01.jpg" ></figure>
+        <ul>
+          <p>1.基本指令
+git init       —— 新建git仓库</br>
+git add 文件/文件夹       —— 将文件添加到缓存区中</br>
+git add -A       — 添加所有内容到缓存区中</br>
+git stutas      ——— 查看git状态</br>
+git commit -m ‘提交信息’      —— 将缓存区中的内容全部提交到git本地仓库中</br>
+
+git log      ——- 查看提交日志</br>
+
+git reset - - hard HEAD      —— 让工作目录中的内容和仓库中的内容保持一致</br>
+git reset --hard HEAD^      —— 回到上一个版本</br>
+git reset - - hard 版本号      —— 回到指定的版本</br>
+git checkout - - 文件名       —— 从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)</br>
+
+git clone - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)</br>
+
+git remote add origin 地址      —– 关联远程仓库(只需要关联一次)</br>
+
+git push [-u] origin master      —– 提交(-u在第一次提交分之的时候才用)</br>
+
+2.分之管理</br>
+创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发</br>
+
+常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)</br>
+
+git branch [-a]       - 查看分之</br>
+git branch 分之名      - 创建分之</br>
+git checkout 分支名      - 切换分之</br>
+git checkout -b 分之名       - 切换并创建新的分之</br>
+git diff 分之1 分之2      - 查看两个分之之间的差异</br>
+git merge 分之名      - 让当前分之和指定分之进行合并</br>
+
+注意: 切换分之、push、pull，这些操作前要保证工作区是clean</br>
+
+怎么避免冲突： 不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>
+        </ul>
+        <p class="autor"><span>作者：何志成</span><span>分类：【<a href="/">日记</a>】</span><span>浏览（<a href="/">4</a>）</span><span>评论（<a href="/">3</a>）</span></p>
+        <div class="dateview">2018-12-20</div>
+      </div>
+
+    </div>
+  </article>
+
+  <script src="js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 -->
+</div>
+</body>
+</html>
